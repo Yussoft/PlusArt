@@ -4,16 +4,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 
 import java.io.IOException;
-
-import static android.R.id.message;
+import java.util.ArrayList;
 
 public class CameraActivity extends Activity implements SurfaceHolder.Callback{
 
+    private ArrayList<String> cuadros;
     private Camera myCamera;
     private SurfaceHolder mySH;
     private boolean isCameraOn = false;
@@ -23,7 +25,23 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         setupLayout();
+    }
 
+    //Función que nos permite escanear un código QR y almacenar su contenido para interpretarlo
+    public void scanQRCode(View view){
+        try {
+
+            Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+            intent.putExtra("SCAN_MODE", "QR_CODE_MODE"); // "PRODUCT_MODE for bar codes
+            startActivityForResult(intent, 0);
+
+        } catch (Exception e) {
+
+            Uri marketUri = Uri.parse("market://details?id=com.google.zxing.client.android");
+            Intent marketIntent = new Intent(Intent.ACTION_VIEW,marketUri);
+            startActivity(marketIntent);
+
+        }
     }
 
     @Override
@@ -39,7 +57,6 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback{
             }
             if(resultCode == RESULT_CANCELED){
                 //handle cancel
-                
             }
         }
     }
