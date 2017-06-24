@@ -18,7 +18,6 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback{
     private SurfaceHolder mySH;
     private boolean isCameraOn = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +33,13 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback{
 
             if (resultCode == RESULT_OK) {
                 String contents = data.getStringExtra("SCAN_RESULT");
-                qrResult.setText(contents);
                 Intent intent = new Intent(this,CameraActivity.class);
                 intent.putExtra("message",contents);
                 startActivity(intent);
             }
             if(resultCode == RESULT_CANCELED){
                 //handle cancel
+                
             }
         }
     }
