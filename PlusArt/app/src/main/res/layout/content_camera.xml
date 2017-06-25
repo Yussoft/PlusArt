@@ -16,12 +16,40 @@
         android:layout_alignParentBottom="true" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/QRbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
         android:onClick="scanQRCode"
-        android:text="Escanear QR" />
+        android:text="Escanear QR"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/paintingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/QRbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Nombre de la pintura" />
+
+    <TextView
+        android:id="@+id/paintingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/paintingAuthor"
+        android:layout_alignLeft="@+id/paintingAuthor"
+        android:layout_alignStart="@+id/paintingAuthor"
+        android:layout_marginBottom="12dp"
+        android:text="Fecha de la pintura" />
+
+    <TextView
+        android:id="@+id/paintingAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="Autor de la pintura"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/QRbutton"
+        android:layout_alignStart="@+id/QRbutton" />
 </RelativeLayout>

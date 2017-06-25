@@ -21,4 +21,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this,CameraActivity.class);
         startActivity(intent);
     }
+
+    public void startOpenCVActivity(View view){
+
+        //Creamos un intent para abrir la actividad de OpenCV
+        Intent intent = new Intent(this, OpenCVCamera.class);
+        startActivity(intent);
+    }
 }
