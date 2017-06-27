@@ -1,55 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.plusart.yus.plusart.CameraActivity"
     tools:showIn="@layout/activity_camera">
 
+
     <SurfaceView
         android:id="@+id/cameraview"
-        android:layout_width="fill_parent"
-        android:layout_height="546dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/QRbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="showHidePicture"
+        android:text="Mostrar/Ocultar" />
+
+    <Button
+        android:id="@+id/showHideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:onClick="scanQRCode"
-        android:text="Escanear QR"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:text="      Escanear QR      " />
 
     <TextView
         android:id="@+id/paintingName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/QRbutton"
+        android:text="Nombre de la pintura"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:text="Nombre de la pintura" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/paintingDate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/paintingAuthor"
-        android:layout_alignLeft="@+id/paintingAuthor"
-        android:layout_alignStart="@+id/paintingAuthor"
-        android:layout_marginBottom="12dp"
-        android:text="Fecha de la pintura" />
+        android:text="Fecha de la pintura"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/cuadroImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:id="@+id/paintingAuthor"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
-        android:text="Autor de la pintura"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/QRbutton"
-        android:layout_alignStart="@+id/QRbutton" />
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/paintingDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/cuadroImageView"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/paintingName"
+        android:layout_marginTop="14dp"
+        app:srcCompat="@drawable/cuadro2" />
+
 </RelativeLayout>

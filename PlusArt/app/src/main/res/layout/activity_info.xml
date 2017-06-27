@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.plusart.yus.plusart.InfoActivity">
+    android:orientation="vertical"
+    tools:context="com.plusart.yus.plusart.InfoActivity"
+    android:background="@drawable/gradient">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="152dp"
-        android:layout_height="19dp"
-        android:text="¿Cómo utilizar PlusArt?"
+        android:id="@+id/titleTextView"
+        android:layout_width="350dp"
+        android:layout_height="21dp"
+        android:text="@string/infotitle2"
+        android:textColor="@color/white"
+        android:textSize="35px"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="222dp"
+        android:layout_below="@+id/title2TextView"
+        android:layout_alignLeft="@+id/title2TextView"
+        android:layout_alignStart="@+id/title2TextView" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="348dp"
-        android:layout_height="114dp"
-        android:text="PlusArt es una aplicación que busca en una lista de Cuadros la información que buscas para mostrarla sobre la pantalla mientras puedes observar el cuadro con la cámara de tu móvil."
+        android:id="@+id/desc1textView"
+        android:layout_width="371dp"
+        android:layout_height="160dp"
+        android:text="@string/infodesc2"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="255dp"
+        android:layout_below="@+id/titleTextView"
+        android:layout_alignLeft="@+id/titleTextView"
+        android:layout_alignStart="@+id/titleTextView"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/title2TextView"
+        android:layout_width="371dp"
+        android:layout_height="160dp"
+        android:text="@string/infodescripcion"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="45dp"
+        android:layout_below="@+id/desc2TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:id="@+id/desc2TextView"
+        android:layout_width="350dp"
+        android:layout_height="21dp"
+        android:text="@string/infotitle"
+        android:textColor="@color/white"
+        android:textSize="35px"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="45dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/title2TextView"
+        android:layout_alignStart="@+id/title2TextView" />
+
+</RelativeLayout>

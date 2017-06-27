@@ -1,6 +1,7 @@
 package com.plusart.yus.plusart;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
-
     /*
     Crear nueva actividad: https://developer.android.com/training/basics/firstapp/starting-activity.html
      */
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         //Creamos un intent para abrir la actividad de OpenCV
         Intent intent = new Intent(this, OpenCVCamera.class);
+        startActivity(intent);
+    }
+
+    public void startInfoActivity(View view){
+        Intent intent = new Intent(this, InfoActivity.class);
         startActivity(intent);
     }
 }

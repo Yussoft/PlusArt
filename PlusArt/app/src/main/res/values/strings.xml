@@ -2,4 +2,28 @@
     <string name="app_name">PlusArt</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="BotonMainActivityAbrirCamara">Comenzar</string>
+    <string name="TituloMainActivity">PlusArt</string>
+    <string name="DescripcionMainActivity">PlusArt es una aplicación que busca aumentar la información
+    que tenemos sobre pinturas utilizando realidad aumentada. Se busca mostrar el nombre, fecha y
+    autor de una serie de cuadros en una galería de arte.
+
+    Para cargar la información de los cuadros de una sala, utiliza la funcionalidad de código QR.</string>
+    <string name="QRButtonName">Camara QR</string>
+    <string name="OPCButtonName">Camara OpenCV</string>
+    <string name="infodescripcion">Esta aplicación necesita de una aplicación externa de lectura de
+    QR, si no la tienes instalada, toca el botón Camara QR y detectará que no está instalada la
+    aplicación, redireccionando a la Store para descargarla. Ocurre lo mismo con la Cámara OpenCV,
+    necesita de OpenCV Manager.
+
+    Ambas aplicaciones se pueden descargar desde la Store.</string>
+    <string name="infotitle">¿Qué necesitas para usar la aplicación?</string>
+    <string name="infotitle2">¿Cómo utilizo la aplicación?</string>
+    <string name="infodesc2">Para utilizar la funcionalidad QR toca el botón Cámara QR, se abrirá una
+    nueva ventana mostrando nuestra cámara y 2 botones más. El botón Escanear QR nos permite escanear
+        un código QR para cargar los cuadros que vienen de ejemplo con la aplicación. Una vez leido
+        el QR con éxito, toca la pantalla para ver el texto informativo. Si quieres ver el cuadro de la
+        información que está en pantalla, toca el botón Mostrar/Ocultar. 
+    </string>
+
+
 </resources>
